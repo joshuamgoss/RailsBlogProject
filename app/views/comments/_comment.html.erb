@@ -1,13 +1,10 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
-<p>
-  <strong>Comment:</strong>
+<div class="rounded border" style="background-color:lightblue">
+<strong><%= comment.commenter %> said: </strong><br>
   <%= comment.body %>
-</p>
+</div>
 <p>
   <%= link_to 'Destroy Comment', [comment.article, comment],
               method: :delete,
-              data: { confirm: 'Are you sure?'}%>
+              data: { confirm: 'Are you sure?'},
+              style:"color:red"%>
 </p>
